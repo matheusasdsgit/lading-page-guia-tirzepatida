@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>21 Dias de Alimentação para Quem Usa Tirzepatida</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sage: #4a7c6f;
+    --sage-light: #6a9d8f;
+    --sage-dark: #2d5a4f;
+    --beige: #f5f0e8;
+    --beige-dark: #e8e0d0;
+    --cream: #faf8f4;
+    --warm-brown: #8b6f5e;
+    --text-dark: #1a2420;
+    --text-mid: #4a5550;
+    --text-light: #7a8a85;
+    --gold: #c9a96e;
+    --gold-light: #e8d5b0;
+    --red-alert: #c0392b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ─── TOPBAR ─── */
+  .topbar {
+    background: var(--sage-dark);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .topbar span { color: var(--gold-light); }
+
+  /* ─── NAV ─── */
+  nav {
+    background: var(--cream);
+    border-bottom: 1px solid var(--beige-dark);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--sage-dark);
+    font-weight: 700;
+  }
+  .nav-cta {
+    background: var(--sage);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .nav-cta:hover { background: var(--sage-dark); transform: translateY(-1px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(160deg, #2d5a4f 0%, #3d7066 50%, #4a7c6f 100%);
+    color: #fff;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.08);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -150px; left: -80px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(201,169,110,0.2);
+    border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    line-height: 1.15;
+    font-weight: 900;
+    margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .hero-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.78);
+    margin-bottom: 36px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+  .hero-cta-group { display: flex; flex-direction: column; gap: 12px; }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--text-dark);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(201,169,110,0.35);
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,169,110,0.5); }
+  .btn-primary:active { transform: scale(0.98); }
+  .hero-guarantee {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-guarantee::before { content: '🔒'; font-size: 14px; }
+
+  /* hero right card */
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 24px;
+    padding: 36px;
+    backdrop-filter: blur(4px);
+  }
+  .hero-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: var(--gold-light);
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat-item {
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.4; }
+  .hero-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 24px 0;
+  }
+  .hero-promise {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 90px 40px; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 16px;
+    padding: 5px 14px;
+    border: 1px solid rgba(74,124,111,0.3);
+    border-radius: 50px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: var(--text-dark);
+  }
+  .section-title em { font-style: italic; color: var(--sage); }
+  .section-subtitle {
+    font-size: 17px;
+    color: var(--text-mid);
+    max-width: 600px;
+    line-height: 1.75;
+  }
+
+  /* ─── PAIN SECTION ─── */
+  .pain-section { background: var(--beige); }
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .pain-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    border: 1px solid var(--beige-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--red-alert), #e74c3c);
+  }
+  .pain-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .pain-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+  .pain-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; }
+  .pain-cta-banner {
+    background: var(--sage-dark);
+    color: #fff;
+    border-radius: 20px;
+    padding: 36px 48px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .pain-cta-banner p { font-size: 19px; font-family: 'Playfair Display', serif; font-weight: 700; max-width: 500px; }
+  .pain-cta-banner p em { font-style: italic; color: var(--gold-light); }
+
+  /* ─── TRANSFORM SECTION ─── */
+  .transform-section { background: var(--cream); }
+  .transform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 48px;
+    align-items: center;
+  }
+  .compare-box {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--beige-dark);
+  }
+  .compare-header {
+    padding: 20px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+  }
+  .compare-header.before { background: #fef2f2; color: var(--red-alert); border-bottom: 1px solid #fecaca; }
+  .compare-header.after { background: #f0faf5; color: var(--sage-dark); border-bottom: 1px solid #b7e5d0; }
+  .compare-list { list-style: none; padding: 20px 28px; }
+  .compare-list li {
+    padding: 10px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid var(--beige);
+  }
+  .compare-list li:last-child { border-bottom: none; }
+  .compare-list li .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .transform-text .section-title { margin-bottom: 20px; }
+  .transform-bullets { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 16px; }
+  .transform-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+  .bullet-dot {
+    width: 28px; height: 28px;
+    background: var(--sage);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ─── TEASER / WHAT'S INSIDE ─── */
+  .inside-section { background: var(--beige); }
+  .inside-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .inside-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid var(--beige-dark);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .inside-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(74,124,111,0.1); }
+  .inside-card-icon {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--sage-light), var(--sage-dark));
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .inside-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+  .inside-card p { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+  .inside-card .locked {
+    display: inline-block;
+    background: var(--beige);
+    color: var(--warm-brown);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-top: 14px;
+    border: 1px solid var(--beige-dark);
+  }
+
+  /* ─── TESTIMONIALS ─── */
+  .testimonials-section { background: var(--sage-dark); color: #fff; }
+  .testimonials-section .section-title { color: #fff; }
+  .testimonials-section .section-tag { color: var(--gold-light); border-color: rgba(201,169,110,0.3); }
+  .testimonials-section .section-subtitle { color: rgba(255,255,255,0.65); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .review-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 28px;
+  }
+  .review-stars { color: var(--gold); font-size: 16px; margin-bottom: 14px; letter-spacing: 2px; }
+  .review-text { font-size: 15px; color: rgba(255,255,255,0.82); line-height: 1.75; font-style: italic; margin-bottom: 20px; }
+  .review-author { display: flex; align-items: center; gap: 12px; }
+  .review-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--sage);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+  .review-name { font-weight: 600; font-size: 14px; }
+  .review-detail { font-size: 12px; color: rgba(255,255,255,0.5); }
+
+  /* ─── URGENCY / PRICE ─── */
+  .price-section { background: var(--cream); }
+  .price-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .price-card {
+    background: #fff;
+    border-radius: 32px;
+    padding: 48px 40px;
+    border: 2px solid var(--sage-light);
+    margin-top: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .price-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sage), var(--gold));
+  }
+  .price-badge {
+    background: var(--gold);
+    color: var(--text-dark);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+  .price-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 28px;
+    color: var(--text-dark);
+  }
+  .price-includes { list-style: none; margin-bottom: 32px; text-align: left; display: flex; flex-direction: column; gap: 12px; }
+  .price-includes li { font-size: 15px; display: flex; align-items: center; gap: 10px; color: var(--text-mid); }
+  .price-includes li::before { content: '✓'; color: var(--sage); font-weight: 700; font-size: 16px; }
+  .price-divider { border: none; border-top: 1px dashed var(--beige-dark); margin: 24px 0; }
+  .price-old { text-decoration: line-through; color: var(--text-light); font-size: 16px; margin-bottom: 4px; }
+  .price-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--sage-dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .price-installment { font-size: 13px; color: var(--text-light); margin-bottom: 32px; }
+  .urgency-bar {
+    background: #fef9ec;
+    border: 1px solid #f0d98a;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-size: 13px;
+    color: #7a5d00;
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px;
+    background: var(--red-alert);
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+  .guarantee-text { font-size: 13px; color: var(--text-light); margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+
+  /* ─── FAQ ─── */
+  .faq-section { background: var(--beige); }
+  .faq-list { max-width: 700px; margin: 48px auto 0; display: flex; flex-direction: column; gap: 16px; }
+  .faq-item { background: #fff; border-radius: 16px; border: 1px solid var(--beige-dark); overflow: hidden; }
+  .faq-q {
+    padding: 20px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+  }
+  .faq-q .arrow { font-size: 18px; transition: transform 0.25s; color: var(--sage); flex-shrink: 0; }
+  .faq-a { padding: 0 24px 20px; font-size: 14px; color: var(--text-mid); line-height: 1.75; display: none; }
+  .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: linear-gradient(160deg, #1a2e28, #2d5a4f);
+    color: #fff;
+    text-align: center;
+    padding: 100px 40px;
+  }
+  .final-cta .section-title { color: #fff; max-width: 600px; margin: 0 auto 16px; }
+  .final-cta .section-subtitle { color: rgba(255,255,255,0.65); margin: 0 auto 40px; max-width: 500px; }
+  .final-cta .btn-primary { font-size: 18px; padding: 20px 48px; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 32px 40px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  footer strong { color: rgba(255,255,255,0.7); }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .hero { padding: 60px 20px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero-card { display: none; }
+    section { padding: 60px 20px; }
+    .transform-grid { grid-template-columns: 1fr; }
+    .pain-cta-banner { text-align: center; justify-content: center; }
+    .price-card { padding: 36px 24px; }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* sticky bottom CTA (mobile) */
+  .sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--sage-dark);
+    padding: 14px 20px;
+    z-index: 200;
+    text-align: center;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+  }
+  .sticky-cta a {
+    background: var(--gold);
+    color: var(--text-dark);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+  }
+  @media (max-width: 768px) { .sticky-cta { display: block; } }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  ⚡ Acesso imediato após a compra &nbsp;·&nbsp; <span>Disponível agora com preço especial de lançamento</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Guia Tirzepatida</div>
+  <a href="#comprar" class="nav-cta">Quero meu guia →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">🌿 Guia Digital Exclusivo</div>
+      <h1>Seu corpo mudou.<br><em>Sua alimentação também precisa mudar.</em></h1>
+      <p class="hero-subtitle">O mapa visual que vai te mostrar exatamente como comer durante os 21 primeiros dias de Tirzepatida — eliminando o enjoo, protegendo sua energia e maximizando seus resultados.</p>
+      <div class="hero-cta-group">
+        <a href="#comprar" class="btn-primary">Quero acesso agora — R$&nbsp;37</a>
+        <span class="hero-guarantee">Compra 100% segura · Acesso instantâneo</span>
+      </div>
+    </div>
+    <div class="hero-card fade-in">
+      <p class="hero-card-title">O que você vai dominar em 21 dias</p>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-number">21</div>
+          <div class="stat-label">dias de programa completo</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">105</div>
+          <div class="stat-label">refeições planejadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">fases progressivas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">0</div>
+          <div class="stat-label">dietas restritivas</div>
+        </div>
+      </div>
+      <hr class="hero-divider">
+      <p class="hero-promise">"Não é sobre comer perfeito. É sobre comer de forma que seu corpo com Tirzepatida consiga usar o alimento a seu favor."</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="pain-section">
+  <div class="section-inner">
+    <div class="fade-in">
+      <span class="section-tag">O que ninguém te contou</span>
+      <h2 class="section-title">A Tirzepatida tira a fome.<br><em>Mas isso pode ser um problema.</em></h2>
+      <p class="section-subtitle">Quando você para de sentir fome, comete erros que sabotam os resultados e pioram os efeitos colaterais. Reconhece algum desses?</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card fade-in">
+        <div class="pain-icon">🤢</div>
+        <h3>Enjoo persistente que não passa</h3>
+        <p>Você acha que é o remédio — mas na maioria das vezes é o que (e como) você está comendo. Existe uma razão específica para isso.</p>
+      </div>
+      <div class="pain-card fade-in">
+        <div class="pain-icon">😮‍💨</div>
+        <h3>Fraqueza e falta de energia</h3>
+        <p>O remédio reduziu sua fome, mas seu corpo ainda precisa de combustível. Sem a estratégia certa, você vai sentir isso no dia a dia.</p>
+      </div>
+      <div class="pain-card fade-in">
+        <div class="pain-icon">📉</div>
+        <h3>Resultados abaixo do esperado</h3>
+        <p>A medicação funciona, mas sem alimentação estratégica você está usando apenas metade do potencial do tratamento.</p>
+      </div>
+      <div class="pain-card fade-in">
+        <div class="pain-icon">💪</div>
+        <h3>Perda de massa muscular</h3>
+        <p>Esse é o erro silencioso mais comum. Sem saber como proteger o músculo, você perde peso — mas perde as partes erradas.</p>
+      </div>
+    </div>
+    <div class="pain-cta-banner fade-in">
+      <p>Esses problemas têm solução. E ela é mais simples do que você imagina — <em>mas precisa ser a solução certa.</em></p>
+      <a href="#comprar" class="btn-primary">Ver a solução →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSFORM SECTION -->
+<section class="transform-section">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center; margin-bottom: 0;">
+      <span class="section-tag">A diferença é real</span>
+      <h2 class="section-title" style="max-width:600px; margin: 0 auto;">Do "estou usando Tirzepatida"<br>para <em>"estou arrasando com Tirzepatida"</em></h2>
+    </div>
+    <div class="transform-grid" style="margin-top: 48px;">
+      <div class="fade-in">
+        <div class="compare-box">
+          <div class="compare-header before">❌ Sem o guia</div>
+          <ul class="compare-list">
+            <li><span class="icon">😣</span> Enjoo constante sem saber por quê</li>
+            <li><span class="icon">⚡</span> Fraqueza e tontura no meio do dia</li>
+            <li><span class="icon">🤷</span> Sem ideia do que comer quando não sente fome</li>
+            <li><span class="icon">📉</span> Perdendo músculo junto com gordura</li>
+            <li><span class="icon">😟</span> Culpa quando come "errado"</li>
+            <li><span class="icon">🔁</span> Tentando dietas aleatórias que não funcionam</li>
+          </ul>
+        </div>
+      </div>
+      <div class="fade-in">
+        <div class="compare-box">
+          <div class="compare-header after">✅ Com o guia</div>
+          <ul class="compare-list">
+            <li><span class="icon">😌</span> Sabe exatamente como reduzir o enjoo</li>
+            <li><span class="icon">🔋</span> Energia estável do café da manhã à noite</li>
+            <li><span class="icon">🎯</span> Cardápio completo para cada dia dos 21</li>
+            <li><span class="icon">💪</span> Massa muscular preservada durante a perda</li>
+            <li><span class="icon">😊</span> Come sem culpa, com estratégia</li>
+            <li><span class="icon">🚀</span> Potencializando cada dose do medicamento</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIDE SECTION -->
+<section class="inside-section">
+  <div class="section-inner">
+    <div class="fade-in">
+      <span class="section-tag">O que está dentro</span>
+      <h2 class="section-title">Um sistema completo.<br><em>Não mais um PDF de dieta.</em></h2>
+      <p class="section-subtitle">Cada detalhe foi pensado para quem usa Tirzepatida — não para qualquer pessoa querendo emagrecer.</p>
+    </div>
+    <div class="inside-cards">
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">🗺️</div>
+        <h3>O Mapa Visual dos 21 Dias</h3>
+        <p>Uma visão completa de como seu corpo se adapta fase a fase — e o que fazer em cada momento para não desperdiçar o efeito do medicamento.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">🍽️</div>
+        <h3>105 Refeições Planejadas</h3>
+        <p>Café, lanches, almoços e jantares para cada um dos 21 dias. Sem precisar pensar — só seguir. Com opções de substituição incluídas.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">🚨</div>
+        <h3>Matriz de Primeiros Socorros</h3>
+        <p>Enjoo, fraqueza, constipação, azia — cada sintoma tem uma resposta específica que a maioria das pessoas simplesmente não conhece.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">🔄</div>
+        <h3>Sistema de Substituição Inteligente</h3>
+        <p>Não gostou ou não tem um alimento? O guia te mostra as trocas exatas que preservam o resultado sem quebrar a lógica do programa.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">📋</div>
+        <h3>Lista de Compras por Fase</h3>
+        <p>O que comprar exatamente em cada semana. Sem desperdício, sem improvisação, sem olhar para a geladeira sem saber o que fazer.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+      <div class="inside-card fade-in">
+        <div class="inside-card-icon">✅</div>
+        <h3>Checklist de Calibragem Diária</h3>
+        <p>7 hábitos diários que determinam se você vai sentir bem ou mal no dia seguinte. Quem usa isso muda completamente sua experiência com o remédio.</p>
+        <span class="locked">🔒 Revelado no guia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="section-inner">
+    <div class="fade-in">
+      <span class="section-tag">Resultados reais</span>
+      <h2 class="section-title">O que quem já aplicou está dizendo</h2>
+      <p class="section-subtitle">De pessoas que usavam Tirzepatida — mas só começaram a ver resultados de verdade depois desse guia.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Passei as duas primeiras semanas enjoada o tempo todo achando que era o remédio. Depois do guia entendi que era o que eu estava comendo. Em 3 dias o enjoo passou."</p>
+        <div class="review-author">
+          <div class="review-avatar">CL</div>
+          <div>
+            <div class="review-name">Claudia L.</div>
+            <div class="review-detail">Usuária de Tirzepatida há 2 meses</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Eu mal conseguia trabalhar de fraca que ficava. O guia me mostrou onde estava errando. Dois dias aplicando e me sinto como uma pessoa diferente. Simples e direto ao ponto."</p>
+        <div class="review-author">
+          <div class="review-avatar">RS</div>
+          <div>
+            <div class="review-name">Renata S.</div>
+            <div class="review-detail">Iniciou Tirzepatida há 3 semanas</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Meu médico prescreveu o remédio mas não me deu nenhuma orientação alimentar. Esse guia preencheu exatamente essa lacuna. Deveria ser obrigatório para quem começa."</p>
+        <div class="review-author">
+          <div class="review-avatar">FM</div>
+          <div>
+            <div class="review-name">Felipe M.</div>
+            <div class="review-detail">Usuário há 6 semanas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE SECTION -->
+<section class="price-section" id="comprar">
+  <div class="section-inner">
+    <div class="price-container fade-in">
+      <span class="section-tag" style="display:block; text-align:center;">Investimento</span>
+      <h2 class="section-title" style="text-align:center;">Um mapa completo pelo valor<br><em>de um café especial</em></h2>
+
+      <div class="price-card">
+        <div class="price-badge">🏷️ Preço de Lançamento</div>
+        <h2>Guia Completo 21 Dias de Alimentação para Tirzepatida</h2>
+        <ul class="price-includes">
+          <li>Programa estruturado em 3 fases progressivas</li>
+          <li>105 refeições planejadas dia a dia</li>
+          <li>Mapa visual da jornada de 21 dias</li>
+          <li>Matriz de primeiros socorros para sintomas</li>
+          <li>Sistema de substituição inteligente</li>
+          <li>Listas de compra organizadas por fase</li>
+          <li>Checklist de calibragem diária</li>
+          <li>Versão vegetariana incluída</li>
+          <li>Acesso imediato em PDF</li>
+        </ul>
+        <hr class="price-divider">
+        <div class="urgency-bar">
+          <div class="pulse-dot"></div>
+          Preço especial de lançamento — pode aumentar a qualquer momento
+        </div>
+        <p class="price-old">De R$ 97</p>
+        <p class="price-value">R$&nbsp;37</p>
+        <p class="price-installment">pagamento único · acesso vitalício</p>
+        <a href="#" class="btn-primary" style="width:100%; font-size: 17px;">✅ Quero meu guia agora por R$ 37</a>
+        <p class="guarantee-text">🔒 Compra segura · 7 dias de garantia · Acesso instantâneo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <span class="section-tag">Dúvidas frequentes</span>
+      <h2 class="section-title">Perguntas que você pode ter</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Funciona para qualquer dosagem de Tirzepatida?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Sim. O guia foi desenvolvido para a fase de adaptação ao medicamento, que é semelhante independente da dose. Os princípios nutricionais se aplicam a qualquer dosagem — do início ao longo prazo do tratamento.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Precisa ser nutricionista para entender?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Absolutamente não. O guia foi criado para ser visual, simples e direto. Não há fórmulas complicadas, contagem calórica obrigatória ou linguagem técnica. Qualquer pessoa consegue aplicar no dia seguinte à compra.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          E se eu já estiver na segunda ou terceira semana?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Não tem problema. Você pode começar pelo ponto exato em que está. O guia é estruturado por fases e você entra na que corresponde ao seu momento atual com o medicamento.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Como vou receber o guia?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Imediatamente após a confirmação do pagamento, você recebe o link de acesso por e-mail. É um arquivo PDF de alta qualidade, que você pode salvar no celular, tablet ou computador e acessar quando quiser, sem precisar de internet.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Tem garantia?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Sim. Você tem 7 dias corridos para testar. Se por qualquer motivo não ficar satisfeito, basta entrar em contato e devolvemos 100% do valor pago, sem perguntas.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Substitui o acompanhamento com nutricionista?
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a">Não substitui — e nem pretende. O guia é um recurso prático para os 21 dias iniciais, mas o acompanhamento profissional sempre é recomendado para resultados mais completos e personalizados.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="section-inner fade-in" style="text-align:center;">
+    <span class="section-tag" style="color: var(--gold-light); border-color: rgba(201,169,110,0.3);">Última chamada</span>
+    <h2 class="section-title">Você já tem o medicamento.<br><em>Agora precisa do mapa.</em></h2>
+    <p class="section-subtitle">A Tirzepatida é uma ferramenta poderosa. Este guia é o que transforma essa ferramenta em resultados reais.</p>
+    <a href="#comprar" class="btn-primary">Quero acesso agora — R$&nbsp;37</a>
+    <p style="font-size:13px; color: rgba(255,255,255,0.4); margin-top: 20px;">🔒 Acesso imediato · 7 dias de garantia · Pagamento seguro</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Guia 21 Dias · Alimentação para Tirzepatida</strong><br>
+  Este guia é um material educativo digital e não substitui orientação médica ou nutricional individualizada.<br>
+  Consulte sempre seu médico ou nutricionista antes de fazer alterações em sua alimentação ou tratamento.<br><br>
+  © 2025 · Todos os direitos reservados
+</footer>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta">
+  <a href="#comprar">Acessar o guia por R$ 37 →</a>
+</div>
+
+<script>
+  function toggleFaq(el) {
+    const item = el.parentElement;
+    item.classList.toggle('open');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
